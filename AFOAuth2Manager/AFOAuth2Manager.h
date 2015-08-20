@@ -259,7 +259,8 @@
  @return Whether or not the credential was stored in the keychain.
  */
 + (BOOL)storeCredential:(AFOAuthCredential *)credential
-         withIdentifier:(NSString *)identifier;
+         withIdentifier:(NSString *)identifier
+        withAccessGroup:(NSString *)accessGroup;
 
 /**
  Stores the specified OAuth token for a given web service identifier in the Keychain.
@@ -272,7 +273,8 @@
  */
 + (BOOL)storeCredential:(AFOAuthCredential *)credential
          withIdentifier:(NSString *)identifier
-      withAccessibility:(id)securityAccessibility;
+      withAccessibility:(id)securityAccessibility
+        withAccessGroup:(NSString *)accessGroup;
 
 /**
  Retrieves the OAuth credential stored with the specified service identifier from the Keychain.
@@ -281,7 +283,7 @@
 
  @return The retrieved OAuth credential.
  */
-+ (AFOAuthCredential *)retrieveCredentialWithIdentifier:(NSString *)identifier;
++ (AFOAuthCredential *)retrieveCredentialWithIdentifier:(NSString *)identifier withAccessGroup:(NSString *)accessGroup;
 
 /**
  Deletes the OAuth credential stored with the specified service identifier from the Keychain.
@@ -290,7 +292,7 @@
 
  @return Whether or not the credential was deleted from the keychain.
  */
-+ (BOOL)deleteCredentialWithIdentifier:(NSString *)identifier;
++ (BOOL)deleteCredentialWithIdentifier:(NSString *)identifier withAccessGroup:(NSString *)accessGroup;
 
 @end
 
