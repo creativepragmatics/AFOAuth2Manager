@@ -21,7 +21,6 @@
 // THE SOFTWARE.
 
 @import AFNetworking;
-
 @class AFOAuthCredential;
 
 @interface AFHTTPRequestSerializer (OAuth2)
